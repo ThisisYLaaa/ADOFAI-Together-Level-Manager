@@ -1,0 +1,8 @@
+/.trae
+/.venv
+/.vscode
+/Cache
+/Example
+/requirements.txt
+/Save
+/__pycache__
