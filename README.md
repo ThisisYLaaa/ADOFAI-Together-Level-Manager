@@ -23,7 +23,7 @@
 ### 安装依赖
 
 ```bash
-pip install ttkbootstrap pillow colorama
+pip install ttkbootstrap colorama
 ```
 
 ### 运行程序
