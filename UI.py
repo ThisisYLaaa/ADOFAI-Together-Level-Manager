@@ -254,8 +254,8 @@ class UI(tb.Window):
             btn.pack(side="left", padx=5, pady=5)
 
         # 关卡列表
-        columns: tuple = ("artist", "song", "author", "date")
-        headers: tuple = ("艺术家", "歌曲", "作者", "日期")
+        columns: tuple = ("song", "artist", "author", "date")
+        headers: tuple = ("歌曲", "艺术家", "作者", "日期")
         widths: tuple = (200, 350, 200, 150)
         anchors: tuple = ("w", "w", "w", "w")
 
@@ -339,7 +339,7 @@ class UI(tb.Window):
             self._refresh_status_bar()
             TreeViewHelper.populate_treeview(self.tree, self.level_data)
         
-        threading.Thread(target=th).start()
+        threading.Thread(target=th, daemon=True).start()
 
     def clear_cache(self) -> None:
         if not sm.settings["unzip_cache_folder"]:

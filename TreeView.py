@@ -109,5 +109,4 @@ class TreeViewHelper:
             # 将项目ID与Level对象关联
             tree.level_map[item_id] = item
         
-        # 按照"date"列正序排序
-        TreeViewHelper.sort_treeview(tree, "date")
+        TreeViewHelper.sort_treeview(tree, 'date')
